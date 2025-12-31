@@ -11,7 +11,7 @@ const Footer = () => {
                 </div>
                 <div className="flex flex-col text-sm items-center mt-2">
                     <span>Copyright © 2025 | All rights reserved</span>
-                    <span className="flex items-center">Designed & Developed with&nbsp;<img className="w-4" src="/assets/heart.svg" alt="" /></span>
+                    <span className="flex items-center">Designed & Developed with&nbsp;<img className="w-4" src="/icons/heart.svg" alt="" /></span>
                 </div>
             </div>
         </footer>

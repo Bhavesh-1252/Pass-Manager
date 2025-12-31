@@ -21,13 +21,13 @@ const Manager = () => {
 
 
     const showPassword = () => {
-        if (ref.current.src.includes("/assets/show.svg")) {
-            ref.current.src = "/assets/hide.svg"
+        if (ref.current.src.includes("/icons/show.svg")) {
+            ref.current.src = "/icons/hide.svg"
             passwordRef.current.type = "password";
             ref.current.title = "Show"
         }
         else {
-            ref.current.src = "/assets/show.svg"
+            ref.current.src = "/icons/show.svg"
             passwordRef.current.type = "text";
             ref.current.title = "Hide"
         }
@@ -141,7 +141,7 @@ const Manager = () => {
                         <div className='relative'>
                             <input ref={passwordRef} value={form.password} name="password" onChange={handleChange} placeholder='Enter Password' className='rounded-full border-2 border-green-700 w-full text-black px-4 py-1' type="password" />
                             <span className={`absolute right-4 top-[6px] cursor-pointer ${passwordRef.current.value === "" ? "hidden" : "inline"}`} onClick={showPassword}>
-                                <img title="Show" ref={ref} src="/assets/show.svg" alt="show" />
+                                <img title="Show" ref={ref} src="/icons/show.svg" alt="show" />
                             </span>
                         </div>
                     </div>
