@@ -21,13 +21,13 @@ const Manager = () => {
 
 
     const showPassword = () => {
-        if (ref.current.src.includes("public/icons/show.svg")) {
-            ref.current.src = "public/icons/hide.svg"
+        if (ref.current.src.includes("src/assets/show.svg")) {
+            ref.current.src = "src/assets/hide.svg"
             passwordRef.current.type = "password";
             ref.current.title = "Show"
         }
         else {
-            ref.current.src = "public/icons/show.svg"
+            ref.current.src = "src/assets/show.svg"
             passwordRef.current.type = "text";
             ref.current.title = "Hide"
         }
@@ -126,7 +126,7 @@ const Manager = () => {
                 pauseOnHover
                 theme="light"
                 transition="Bounce"
-                
+
             />
             <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"><div className="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-green-400 opacity-20 blur-[100px]"></div></div>
             <div className="lg:container lg:px-40 lg:py-16 lg:mx-auto">
@@ -140,8 +140,8 @@ const Manager = () => {
                         <input value={form.username} name="username" onChange={handleChange} placeholder='Enter Username' className='rounded-full border-2 border-green-700 w-full text-black px-4 py-1' type="text" />
                         <div className='relative'>
                             <input ref={passwordRef} value={form.password} name="password" onChange={handleChange} placeholder='Enter Password' className='rounded-full border-2 border-green-700 w-full text-black px-4 py-1' type="password" />
-                            <span className={`absolute right-4 top-[6px] cursor-pointer ${passwordRef.current.value===""? "hidden":"inline"}`} onClick={showPassword}>
-                                <img title="Show" ref={ref} src="public/icons/hide.svg" alt="show" />
+                            <span className={`absolute right-4 top-[6px] cursor-pointer ${passwordRef.current.value === "" ? "hidden" : "inline"}`} onClick={showPassword}>
+                                <img title="Show" ref={ref} src="src/assets/show.svg" alt="show" />
                             </span>
                         </div>
                     </div>
